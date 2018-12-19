@@ -1,7 +1,7 @@
 {
-  "name": "cz-conventional-changelog",
+  "name": "cz-cc-conventional-changelog",
   "version": "0.0.0-semantically-released.0",
-  "description": "Commitizen adapter following the conventional-changelog format.",
+  "description": "Clipchamp's Commitizen adapter following the conventional-changelog format.",
   "main": "index.js",
   "scripts": {
     "commit": "git-cz",
@@ -13,10 +13,15 @@
     "type": "git",
     "url": "https://github.com/commitizen/cz-conventional-changelog.git"
   },
-  "author": "Jim Cummins <jimthedev@gmail.com>",
+  "contributes": [
+    "Jim Cummins <jimthedev@gmail.com>",
+    "Byron Mejia <byron@clipchamp.com"
+  ],
   "license": "MIT",
   "dependencies": {
     "conventional-commit-types": "^2.0.0",
+    "fuse.js": "^3.3.0",
+    "inquirer-autocomplete-prompt": "^0.12.0",
     "lodash.map": "^4.5.1",
     "longest": "^1.0.1",
     "right-pad": "^1.0.1",
@@ -27,7 +32,7 @@
     "semantic-release": "^6.3.2"
   },
   "config": {
-    "commitizen" : {
+    "commitizen": {
       "path": "./index.js"
     }
   }
