@@ -22,9 +22,6 @@
     "conventional-commit-types": "^2.0.0",
     "fuse.js": "^3.3.0",
     "inquirer-autocomplete-prompt": "^0.12.0",
-    "lodash.map": "^4.5.1",
-    "longest": "^1.0.1",
-    "right-pad": "^1.0.1",
     "word-wrap": "^1.0.3"
   },
   "devDependencies": {
