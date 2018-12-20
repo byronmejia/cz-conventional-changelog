@@ -30,7 +30,7 @@ module.exports = options => {
         };
 
         // parentheses are only needed when a scope is present
-        const scope = answers.scope.trim();
+        let scope = answers.scope.trim();
         scope = scope ? "(" + answers.scope.trim() + ")" : "";
 
         // Hard limit this line
@@ -42,7 +42,7 @@ module.exports = options => {
         const body = wrap(answers.body, wrapOptions);
 
         // Apply breaking change prefix, removing it if already present
-        var breaking = answers.breaking ? answers.breaking.trim() : "";
+        let breaking = answers.breaking ? answers.breaking.trim() : "";
         breaking = breaking
           ? "BREAKING CHANGE: " + breaking.replace(/^BREAKING CHANGE: /, "")
           : "";
@@ -52,13 +52,13 @@ module.exports = options => {
 
         const footer = filter([breaking, issues]).join("\n\n");
         commit(`
-        ${head}
+          ${head}
 
 
-        ${body}
+          ${body}
 
 
-        ${footer}
+          ${footer}
         `);
       });
     }
